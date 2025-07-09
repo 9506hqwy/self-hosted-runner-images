@@ -2,7 +2,8 @@
     "recommendations": [
         "davidanson.vscode-markdownlint",
         "editorconfig.editorconfig",
-        "timonwong.shellche",
+        "hediet.vscode-drawio",
+        "timonwong.shellcheck",
         "yzhang.markdown-all-in-one"
     ]
 }
