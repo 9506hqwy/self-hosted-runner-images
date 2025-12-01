@@ -1,0 +1,11 @@
+[Unit]
+Description=Forgejo Actions Self Hosted Runner %I
+PartOf=actions-runners.target
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/podman run --rm --privileged --name runner%I -e FORGEJO_URL=%% -e FORGEJO_RUNNER_NAME=runner%I --secret forgejo_token --cap-add=CAP_AUDIT_WRITE -v %%:/forgejo_runner:z runner
+Restart=always
+StandardOutput=null
+StandardError=null
+RestartSec=6
